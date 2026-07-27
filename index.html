@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Story I'd Choose Again — Sofia ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.3/confetti.browser.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+<!-- BACKGROUND -->
+
+<div class="atmosphere">
+    <div class="aurora"></div>
+    <div id="stars"></div>
+</div>
+
+
+<div id="story-thread">
+    <div class="track">
+        <div class="pulse"></div>
+    </div>
+</div>
+
+
+
+
+
+<!-- PASSWORD SCREEN -->
+
+<div id="password-screen">
+
+
+<div class="pw-card glass" id="pw-form-wrap">
+
+
+<h1>
+The Story I'd Choose Again
+</h1>
+
+
+<p class="sub">
+Some stories are worth reading again and again.
+</p>
+
+
+<div class="pw-hint">
+Enter our special date
+</div>
+
+
+<input 
+id="pw-input"
+type="password"
+inputmode="numeric"
+placeholder="••••••••"
+maxlength="20"
+>
+
+
+<button id="pw-submit">
+Unlock ❤️
+</button>
+
+
+<div id="pw-error"></div>
+
+
+</div>
+
+
+
+
+
+<div class="pw-card" id="pw-success">
+
+
+<div class="heart">
+❤️
+</div>
+
+
+<h1>
+Access Granted
+</h1>
+
+
+<p class="sub">
+Welcome back, Sofia.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- INTRO SCREEN -->
+
+
+<div id="intro-screen">
+
+
+<div id="intro-typing"></div>
+
+
+
+<div id="intro-lines">
+
+
+<p id="line1">
+There are billions of stories in this world.
+</p>
+
+
+<p id="line2">
+But if I were given another life...
+</p>
+
+
+<p id="line3">
+I'd still choose this one.
+</p>
+
+
+</div>
+
+
+
+
+<div id="intro-title">
+
+<h1 class="display">
+The Story I'd Choose Again
+</h1>
+
+</div>
+
+
+
+<button id="begin-btn">
+Begin Our Story →
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- MUSIC -->
+
+<audio id="bg-music" loop preload="auto">
+
+<source src="music.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+
+
+
+<main id="main-content" style="display:none;">
+
+
+
+
+
+
+<!-- HOME -->
+
+
+<section id="home">
+
+
+<span class="eyebrow">
+Chapter One
+</span>
+
+
+<h1 class="display">
+The Story I'd Choose Again
+</h1>
+
+
+<p class="section-sub">
+A story created for Sofia ❤️
+</p>
+
+
+
+<div class="scroll-indicator"></div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- COUNTER -->
+
+
+<section id="counter">
+
+
+<div class="heartbeat">
+❤️
+</div>
+
+
+<span class="eyebrow">
+Together For
+</span>
+
+
+
+
+<div class="counter-grid">
+
+
+
+<div class="glass counter-box">
+
+<div class="num" id="c-days">
+0
+</div>
+
+<div class="label">
+Days
+</div>
+
+</div>
+
+
+
+
+<div class="glass counter-box">
+
+<div class="num" id="c-hours">
+0
+</div>
+
+<div class="label">
+Hours
+</div>
+
+</div>
+
+
+
+
+
+<div class="glass counter-box">
+
+<div class="num" id="c-mins">
+0
+</div>
+
+<div class="label">
+Minutes
+</div>
+
+</div>
+
+
+
+
+
+<div class="glass counter-box">
+
+<div class="num" id="c-secs">
+0
+</div>
+
+<div class="label">
+Seconds
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<p class="counter-note">
+
+Every second with you becomes a memory I want to keep forever.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- PHOTO ALBUM -->
+
+
+<section id="album">
+
+
+<span class="eyebrow">
+Chapter Two
+</span>
+
+
+<h2 class="section-title">
+Through My Eyes
+</h2>
+
+
+<p class="section-sub">
+Every picture reminds me of something special about you.
+</p>
+
+
+
+<div class="album-grid" id="album-grid"></div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- SOUNDTRACK -->
+
+
+<section id="soundtrack">
+
+
+<span class="eyebrow">
+Chapter Three
+</span>
+
+
+<h2 class="section-title">
+Our Soundtrack
+</h2>
+
+
+
+<p class="section-sub">
+Some memories sound like music.
+</p>
+
+
+
+<div class="playlist" id="playlist"></div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- LETTERS -->
+
+
+<section id="letters">
+
+
+<span class="eyebrow">
+Chapter Four
+</span>
+
+
+<h2 class="section-title">
+Letters You'll Always Have
+</h2>
+
+
+
+<p class="section-sub">
+Open whichever one finds you.
+</p>
+
+
+
+<div class="envelope-grid" id="envelope-grid"></div>
+
+
+
+  </section>
+  <!-- 365 REASONS -->
+
+<section id="reasons">
+
+
+<span class="eyebrow">
+Chapter Five
+</span>
+
+
+<h2 class="section-title">
+365 Reasons I'd Choose You Again
+</h2>
+
+
+<p class="section-sub">
+One reason for every day. Tap a card to reveal it.
+</p>
+
+
+
+<div class="reasons-progress" id="reasons-progress">
+0 / 365 Unlocked
+</div>
+
+
+
+<div class="reasons-grid" id="reasons-grid"></div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- FUTURE CHAPTERS -->
+
+
+<section id="future">
+
+
+<span class="eyebrow">
+Chapter Six
+</span>
+
+
+
+<h2 class="section-title">
+The Chapters We Haven't Written Yet
+</h2>
+
+
+
+<p class="section-sub">
+Everything waiting for us in the future.
+</p>
+
+
+
+
+<div class="timeline" id="future-timeline"></div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- FINAL SURPRISE -->
+
+
+<section id="final-surprise">
+
+
+<div id="final-typing"></div>
+
+
+
+<img 
+id="final-photo"
+alt="Sofia"
+>
+
+
+
+
+<div id="final-title-wrap">
+
+
+<h2 class="display">
+The Story I'd Choose Again
+</h2>
+
+
+
+<p class="section-sub">
+
+Out of every chapter life could have written for me...
+you will always be my favorite one.
+
+</p>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- GUESTBOOK -->
+
+
+<section id="guestbook">
+
+
+<span class="eyebrow">
+Last Page
+</span>
+
+
+
+<h2 class="section-title">
+Before You Go...
+</h2>
+
+
+
+<p class="section-sub">
+Leave a little piece of your heart here.
+</p>
+
+
+
+<textarea 
+id="gb-input"
+placeholder="Write anything you'd like me to remember..."
+></textarea>
+
+
+
+<br>
+
+
+
+<button id="gb-submit">
+❤️ Send
+</button>
+
+
+
+<div id="gb-confirm">
+
+Your message has been safely kept inside our little universe.
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+made with ❤️ — The Story I'd Choose Again for Sofia
+
+</footer>
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+<!-- PHOTO VIEWER -->
+
+
+<div id="photo-viewer">
+
+
+<button id="viewer-close">
+✕
+</button>
+
+
+
+<div class="viewer-inner">
+
+
+
+<img 
+id="viewer-img"
+src=""
+alt=""
+>
+
+
+
+
+<div class="viewer-text">
+
+
+<div 
+class="eyebrow"
+id="viewer-caption">
+</div>
+
+
+
+<p id="viewer-message"></p>
+
+
+
+
+<div class="viewer-nav">
+
+
+<button id="viewer-prev">
+← Previous
+</button>
+
+
+
+<button id="viewer-next">
+Next →
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- LETTER VIEWER -->
+
+
+<div id="letter-viewer">
+
+
+<button id="letter-close">
+✕
+</button>
+
+
+
+<div 
+class="letter-paper"
+id="letter-paper">
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
